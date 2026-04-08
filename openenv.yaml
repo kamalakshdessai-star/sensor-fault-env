@@ -1,0 +1,17 @@
+spec_version: 1
+name: sensor-fault-env
+type: environment
+runtime: python
+app: server/app.py
+port: 7860
+description: >
+  Industrial sensor fault detection environment.
+  An AI agent monitors a robotic system's sensor streams and must detect,
+  classify, and respond to injected faults before they cause system damage.
+  3 tasks: spike detection (easy), drift detection (medium), compound fault (hard).
+author: your-hf-username
+tags:
+  - robotics
+  - fault-detection
+  - industrial
+  - predictive-maintenance
