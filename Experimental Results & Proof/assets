@@ -1,0 +1,101 @@
+PS C:\Users\Kamlaksh\Desktop\sensor_fault_env> $env:API_BASE_URL = "https://router.huggingface.co/v1"
+PS C:\Users\Kamlaksh\Desktop\sensor_fault_env> $env:ENV_BASE_URL = "https://Kamalaksh-sensor-fault-env.hf.space"
+PS C:\Users\Kamlaksh\Desktop\sensor_fault_env> $env:MODEL_NAME   = "Qwen/Qwen2.5-7B-Instruct"
+PS C:\Users\Kamlaksh\Desktop\sensor_fault_env> $env:HF_TOKEN     = "Your token"
+PS C:\Users\Kamlaksh\Desktop\sensor_fault_env> python inference.py
+[START] task=task_1_spike env=sensor-fault-env model=Qwen/Qwen2.5-7B-Instruct
+[STEP] step=1 action=flag_anomaly:temperature_c:low reward=-0.10 done=false
+[STEP] step=2 action=flag_anomaly:temperature_c:medium reward=-0.10 done=false
+[STEP] step=3 action=flag_anomaly:temperature_c:high reward=-0.10 done=false
+[STEP] step=4 action=flag_anomaly:temperature_c:high reward=-0.10 done=false
+[STEP] step=5 action=flag_anomaly:temperature_c:high reward=-0.10 done=false
+[STEP] step=6 action=flag_anomaly:temperature_c:high reward=-0.10 done=false
+[STEP] step=7 action=flag_anomaly:temperature_c:high reward=-0.10 done=false
+[STEP] step=8 action=flag_anomaly:temperature_c:high reward=-0.10 done=false
+[STEP] step=9 action=flag_anomaly:temperature_c:high reward=0.30 done=false
+[STEP] step=10 action=flag_anomaly:temperature_c:high reward=0.30 done=false
+[STEP] step=11 action=flag_anomaly:temperature_c:high reward=0.30 done=false
+[STEP] step=12 action=flag_anomaly:temperature_c:high reward=0.30 done=false
+[STEP] step=13 action=flag_anomaly:temperature_c:high reward=0.30 done=false
+[STEP] step=14 action=flag_anomaly:temperature_c:high reward=0.30 done=false
+[STEP] step=15 action=flag_anomaly:temperature_c:high reward=0.30 done=false
+[STEP] step=16 action=flag_anomaly:temperature_c:high reward=0.30 done=false
+[STEP] step=17 action=flag_anomaly:temperature_c:high reward=0.30 done=false
+[STEP] step=18 action=flag_anomaly:temperature_c:high reward=0.30 done=true
+[END] success=true steps=18 score=0.70
+[START] task=task_2_drift env=sensor-fault-env model=Qwen/Qwen2.5-7B-Instruct
+[STEP] step=1 action=normal reward=0.01 done=false
+[STEP] step=2 action=normal reward=0.01 done=false
+[STEP] step=3 action=normal reward=0.01 done=false
+[STEP] step=4 action=normal reward=0.01 done=false
+[STEP] step=5 action=normal reward=0.01 done=false
+[STEP] step=6 action=normal reward=-0.02 done=false
+[STEP] step=7 action=normal reward=-0.02 done=false
+[STEP] step=8 action=normal reward=-0.02 done=false
+[STEP] step=9 action=normal reward=-0.02 done=false
+[STEP] step=10 action=normal reward=-0.02 done=false
+[STEP] step=11 action=normal reward=-0.02 done=false
+[STEP] step=12 action=normal reward=-0.02 done=false
+[STEP] step=13 action=normal reward=-0.02 done=false
+[STEP] step=14 action=normal reward=-0.02 done=false
+[STEP] step=15 action=normal reward=-0.02 done=false
+[STEP] step=16 action=normal reward=-0.02 done=false
+[STEP] step=17 action=normal reward=-0.02 done=false
+[STEP] step=18 action=flag_anomaly:vibration_g:low reward=0.30 done=false
+[STEP] step=19 action=flag_anomaly:temperature_c:low reward=-0.05 done=false
+[STEP] step=20 action=flag_anomaly:vibration_g:low reward=0.30 done=false
+[STEP] step=21 action=flag_anomaly:temperature_c:low reward=-0.05 done=false
+[STEP] step=22 action=flag_anomaly:vibration_g:low reward=0.30 done=false
+[STEP] step=23 action=flag_anomaly:vibration_g:low reward=0.30 done=false
+[STEP] step=24 action=flag_anomaly:temperature_c:low reward=-0.05 done=false
+[STEP] step=25 action=flag_anomaly:vibration_g:low reward=0.30 done=false
+[STEP] step=26 action=flag_anomaly:vibration_g:low reward=0.30 done=false
+[STEP] step=27 action=flag_anomaly:temperature_c:low reward=-0.05 done=false
+[STEP] step=28 action=flag_anomaly:vibration_g:low reward=0.30 done=false
+[STEP] step=29 action=normal reward=-0.02 done=false
+[STEP] step=30 action=normal reward=-0.02 done=true
+[END] success=true steps=30 score=0.70
+[START] task=task_3_compound env=sensor-fault-env model=Qwen/Qwen2.5-7B-Instruct
+[STEP] step=1 action=normal reward=0.01 done=false
+[STEP] step=2 action=normal reward=0.01 done=false
+[STEP] step=3 action=normal reward=0.01 done=false
+[STEP] step=4 action=normal reward=0.01 done=false
+[STEP] step=5 action=normal reward=0.01 done=false
+[STEP] step=6 action=normal reward=0.01 done=false
+[STEP] step=7 action=normal reward=0.01 done=false
+[STEP] step=8 action=normal reward=0.01 done=false
+[STEP] step=9 action=normal reward=0.01 done=false
+[STEP] step=10 action=normal reward=0.01 done=false
+[STEP] step=11 action=normal reward=-0.02 done=false
+[STEP] step=12 action=normal reward=-0.02 done=false
+[STEP] step=13 action=normal reward=-0.02 done=false
+[STEP] step=14 action=normal reward=-0.02 done=false
+[STEP] step=15 action=flag_anomaly:current_draw_a:high reward=0.30 done=false
+[STEP] step=16 action=flag_anomaly:current_draw_a:high reward=0.30 done=false
+[STEP] step=17 action=flag_anomaly:vibration_g:low reward=0.30 done=false
+[STEP] step=18 action=flag_anomaly:current_draw_a:high reward=0.30 done=false
+[STEP] step=19 action=flag_anomaly:vibration_g:medium reward=0.30 done=false
+[STEP] step=20 action=flag_anomaly:current_draw_a:high reward=0.30 done=false
+[STEP] step=21 action=flag_anomaly:vibration_g:medium reward=0.30 done=false
+[STEP] step=22 action=flag_anomaly:current_draw_a:high reward=0.30 done=false
+[STEP] step=23 action=flag_anomaly:vibration_g:medium reward=0.30 done=false
+[STEP] step=24 action=flag_anomaly:current_draw_a:high reward=0.30 done=false
+[STEP] step=25 action=flag_anomaly:vibration_g:medium reward=0.30 done=false
+[STEP] step=26 action=normal reward=-0.02 done=false
+[STEP] step=27 action=normal reward=-0.02 done=false
+[STEP] step=28 action=normal reward=-0.02 done=false
+[STEP] step=29 action=normal reward=-0.02 done=false
+[STEP] step=30 action=normal reward=-0.02 done=false
+[STEP] step=31 action=normal reward=-0.02 done=false
+[STEP] step=32 action=normal reward=-0.02 done=false
+[STEP] step=33 action=normal reward=-0.02 done=false
+[STEP] step=34 action=normal reward=-0.02 done=false
+[STEP] step=35 action=normal reward=-0.02 done=true
+[END] success=true steps=35 score=0.85
+
+
+=== SUMMARY ===
+PASS | task_1_spike       | score: 0.70
+PASS | task_2_drift       | score: 0.70
+PASS | task_3_compound    | score: 0.85
+Average: 0.75
