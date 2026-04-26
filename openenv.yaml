@@ -5,13 +5,31 @@ runtime: python
 app: server/app.py
 port: 7860
 description: >
-  Industrial sensor fault detection environment.
-  An AI agent monitors a robotic system's sensor streams and must detect,
-  classify, and respond to injected faults before they cause system damage.
-  3 tasks: spike detection (easy), drift detection (medium), compound fault (hard).
-author: your-hf-username
+  FactoryMind: Multi-agent scalable oversight environment.
+  An Overseer AI monitors Worker AIs on an industrial factory floor,
+  detects malfunctioning agents, synthesizes cross-subsystem faults,
+  and improves through memory across episodes.
+  6 tasks: 3 single-agent (spike, drift, compound) +
+  3 multi-agent (bad worker, cascade, self-improvement).
+author: Kamalaksh
 tags:
+  - multi-agent
+  - scalable-oversight
+  - self-improvement
   - robotics
   - fault-detection
   - industrial
   - predictive-maintenance
+  - ai-safety
+endpoints:
+  single_agent:
+    reset: /reset
+    step: /step
+    state: /state
+    health: /health
+  multi_agent:
+    reset: /multi/reset
+    step: /multi/step
+    state: /multi/state
+    health: /multi/health
+  memory: /memory
